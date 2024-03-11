@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const getDomainsFromENS = require('./getDomainsFromENS');
 
 // Route to get a specific user by ID
