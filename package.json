@@ -1,0 +1,87 @@
+{
+	
+  "dependencies": {
+	
+  	
+  "@avvy/client": "^3.1.3",
+	
+  	
+  "@bonfida/spl-name-service": "^0.1.62",
+	
+  	
+  "@concordium/node-sdk": "^9.4.0",
+	
+  	
+  "@ensdomains/ensjs": "^3.0.0",
+	
+  	
+  "@kabuto-sh/ns": "0.10.3",
+	
+  	
+  "@solana/web3.js": "^1.76.0",
+	
+  	
+  "@urbit/http-api": "^2.3.0",
+	
+  	
+  "alchemy-sdk": "^3.2.0",
+	
+  	
+  "canvas": "^2.10.1",
+	
+  	
+  "dotenv": "^16.0.3",
+	
+  	
+  "ens": "^0.0.1",
+	
+  	
+  "ethereum-ens": "^0.8.0",
+	
+  	
+  "form-data": "^4.0.0",
+	
+  	
+  "hashgraph-name-resolution-sdk": "^3.1.0",
+	
+  	
+  "ipfs-http-client": "^60.0.1",
+	
+  	
+  "markdown-it": "^13.0.1",
+	
+  	
+  "moralis": "^2.21.0",
+	
+  	
+  "node-fetch": "^3.3.2",
+	
+  	
+  "protobufjs": "^5.0.1",
+	
+  	
+  "request": "^2.88.2",
+	
+  	
+  "simple-git": "^3.19.1",
+	
+  	
+  "socket.io-client": "^4.7.2",
+	
+  	
+  "twilio": "^4.11.1",
+	
+  	
+  "url": "^0.11.0",
+	
+  	
+  "webpage": "^0.3.0",
+	
+  	
+  "website-scraper": "^5.3.1",
+	
+  	
+  "ws": "^8.14.2"
+	
+  }
+}
