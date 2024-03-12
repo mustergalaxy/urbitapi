@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors'); // Import the cors middleware
 const app = express();
 const PORT = process.env.PORT || 3001;
 const getDomainsFromENS = require('./getDomainsFromENS');
