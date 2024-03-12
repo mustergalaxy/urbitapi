@@ -3,6 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const getDomainsFromENS = require('./getDomainsFromENS');
 
+app.use(cors());
+
 // Route to get a specific user by ID
 app.get('/address/:ensName', async (req, res) => {
   try {
