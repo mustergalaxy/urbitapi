@@ -1,12 +1,11 @@
 const Moralis = require("moralis").default;
 
+Moralis.start({
+  apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjZmMDkxYmJhLThhZWYtNDEwZi05MGMyLWU4ZTIwYzRkMjUzZSIsIm9yZ0lkIjoiMzM2OTA4IiwidXNlcklkIjoiMzQ2MzgyIiwidHlwZUlkIjoiYTIzZWE5YjMtMjY1NS00ZjZmLThmMTQtNjdhNDk0ZDI4NDE3IiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE2ODQ5MjQxNDAsImV4cCI6NDg0MDY4NDE0MH0.hpvWsrLq2lFW2jri5uL_CXREoSWQkwPgM64MgwDzKEU"
+});
 // 0xFcB6BC97B09e01caF88C0738E0E25943C8Bc8a51
 const getEthAll = async (address) =>{
 	try {
-  await Moralis.start({
-    apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjZmMDkxYmJhLThhZWYtNDEwZi05MGMyLWU4ZTIwYzRkMjUzZSIsIm9yZ0lkIjoiMzM2OTA4IiwidXNlcklkIjoiMzQ2MzgyIiwidHlwZUlkIjoiYTIzZWE5YjMtMjY1NS00ZjZmLThmMTQtNjdhNDk0ZDI4NDE3IiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE2ODQ5MjQxNDAsImV4cCI6NDg0MDY4NDE0MH0.hpvWsrLq2lFW2jri5uL_CXREoSWQkwPgM64MgwDzKEU"
-  });
-
   let response = await Moralis.EvmApi.nft.getWalletNFTs({
     "chain": "0x1",
     "format": "decimal",
