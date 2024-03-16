@@ -3,10 +3,13 @@
   "dependencies": {
 	
   	
+  "@aptos-labs/ts-sdk": "^1.10.0",
+	
+  	
   "@avvy/client": "^3.1.3",
 	
   	
-  "@bonfida/spl-name-service": "^0.1.62",
+  "@bonfida/spl-name-service": "^0.1.67",
 	
   	
   "@concordium/node-sdk": "^9.4.0",
@@ -18,13 +21,19 @@
   "@kabuto-sh/ns": "0.10.3",
 	
   	
-  "@solana/web3.js": "^1.76.0",
+  "@solana/web3.js": "^1.91.1",
 	
   	
   "@urbit/http-api": "^2.3.0",
 	
   	
   "alchemy-sdk": "^3.2.0",
+	
+  	
+  "audit": "^0.0.6",
+	
+  	
+  "axios": "^1.6.8",
 	
   	
   "canvas": "^2.10.1",
@@ -37,6 +46,9 @@
 	
   	
   "ethereum-ens": "^0.8.0",
+	
+  	
+  "fix": "^0.0.3",
 	
   	
   "form-data": "^4.0.0",
@@ -57,6 +69,9 @@
   "node-fetch": "^3.3.2",
 	
   	
+  "npm": "^10.5.0",
+	
+  	
   "protobufjs": "^5.0.1",
 	
   	
@@ -73,6 +88,9 @@
 	
   	
   "url": "^0.11.0",
+	
+  	
+  "web3": "^1.0.0-beta.34",
 	
   	
   "webpage": "^0.3.0",

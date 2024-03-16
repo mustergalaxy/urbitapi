@@ -1,30 +1,44 @@
 const express = require('express');
 const cors = require('cors'); // Import the cors middleware
 const app = express();
-const PORT = process.env.PORT || 3001;
-const getDomainsFromENS = require('./getDomainsFromENS');
-const getEthNFT = require('./getEthNFT'); 
-
+const PORT = process.env.PORT || 3002;
+const getEthDomain = require('./getEthDomain'); 
+const getHederaDomain = require('./getHbarDomain'); 
+const getAptosDomain = require('./getAptosDomain'); 
+const getSolDomain = require('./getSolDomain'); 
+const getCcdDomain = require('./getCcdDomain'); 
 app.use(cors());
 
-// Route to get a specific user by ID
-app.get('/address/:ensName', async (req, res) => {
-  try {
-    const { ensName } = req.params;
-    const address = await getDomainsFromENS.resolve(ensName);
-    res.json({ address });
-  } catch (error) {
-    console.error('Error resolving ENS name:', error);
-    res.status(500).json({ error: 'Internal server error.' });
-  }
-});
 
-app.get('/nft/:address', async (req, res) => {
+app.get('/domain/bname/:blockchainName/address/:address', async (req, res) => {
   try {
-    const { address } = req.params;
-    const nft = await getEthNFT.getEthAll(address)
-    // console.log(nft)
-    res.json({ nft });
+    const { address,blockchainName } = req.params;
+    if(blockchainName === 'eth'){
+      const domains = await getEthDomain.getAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'hbar'){
+      const domains = await getHederaDomain.getAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'apt'){
+      const domains = await getAptosDomain.getAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'ccd'){
+      const domains = await getCcdDomain.getAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'sol'){
+      const domains = await getSolDomain.getSolAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    
   } catch (error) {
     console.error('Error resolving address:', error);
     res.status(500).json({ error: 'Internal server error.' });
