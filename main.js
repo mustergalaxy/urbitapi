@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors'); // Import the cors middleware
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 const getEthDomain = require('./getEthDomain'); 
 const getHederaDomain = require('./getHbarDomain'); 
 const getAptosDomain = require('./getAptosDomain'); 
