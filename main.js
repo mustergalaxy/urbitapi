@@ -7,6 +7,8 @@ const getHederaDomain = require('./getHbarDomain');
 const getAptosDomain = require('./getAptosDomain'); 
 const getSolDomain = require('./getSolDomain'); 
 const getCcdDomain = require('./getCcdDomain'); 
+const getBtcDomain = require('./getBtcDomain');
+const getUdDomain = require('./getUdDomain');
 app.use(cors());
 
 
@@ -35,6 +37,16 @@ app.get('/domain/bname/:blockchainName/address/:address', async (req, res) => {
     }
     if(blockchainName === 'sol'){
       const domains = await getSolDomain.getSolAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'btc'){
+      const domains = await getBtcDomain.getAllDomains(address)
+      // console.log(nft)
+      res.json(domains);
+    }
+    if(blockchainName === 'ud'){
+      const domains = await getUdDomain.getAllDomains(address)
       // console.log(nft)
       res.json(domains);
     }
