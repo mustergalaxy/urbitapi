@@ -11,10 +11,11 @@ const getAllDomains = async (address) => {
         const ens = new ENS(web3);
         // Reverse lookup for ENS name
         const name = await ens.reverse(address).name();
+        console.log(name)
 		const response = {
 			'eth': {
-                'domains': name,
-                'length': name.length
+                'domains': [name],
+                'length': [name].length
             }
 		}
 		console.log(response)
