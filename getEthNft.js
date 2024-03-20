@@ -22,7 +22,7 @@ const getEthAll = async (address) =>{
     image_url = image_url.split('/')
     parsedData.image = 'https://ipfs.io/ipfs/'+image_url[2];
     result[i].metadata = parsedData
-      }
+    }
 
   response = {
     'eth':{
